@@ -1,4 +1,5 @@
 import React from "react";
+import styles from './counter2.module.css'
 
 class Counter2 extends React.Component {
   shouldComponentUpdate (nextProps) {
@@ -14,8 +15,8 @@ class Counter2 extends React.Component {
 render() {
   console.log("Counter 2 is calling");
   return (
-    <div>
-      <h2>Counter 2:</h2>
+    <div className={styles.caja}>
+      <h2 className={styles.letra}>Counter 2:</h2>
       <h3>{this.props.value}</h3>
       <button onClick={this.props.onClick}>Add</button>
     </div>
