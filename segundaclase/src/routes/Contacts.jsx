@@ -4,8 +4,9 @@ import { useParams } from "react-router-dom";
 import { getContact } from "../data/datos";
 
 export default function Contacts(){
+    //useParams() es un hook de react Router y nos permite acceder desde un componente a los parámetros de la ruta.
     const params = useParams();
-
+   // useMemo()Devuelve un valor memorizado
     const contactos = useMemo(() => getContact(params.contactid), [params.contactid]);
 
     if(!contactos){
