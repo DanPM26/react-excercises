@@ -1,6 +1,5 @@
 import React from "react";
 
-
  function Contact(){
     const pacientes = [
                  {id:1, name: "Juan", age:15},
