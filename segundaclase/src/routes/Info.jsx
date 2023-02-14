@@ -1,12 +1,12 @@
 import React from "react";
- import { Link, Outlet } from "react-router-dom";
- import { items } from "../data/datos";
-
-export default function Home(){
+import { Link } from "react-router-dom";
+import Example from "./Componentes-hooks/useEffect";
+import Reduc from "./Componentes-hooks/useReducer";
+import Multiplicacion from "./Componentes-hooks/useMemo";
+function Info(){
     return(
         <>
-
-         <nav>
+           <nav>
             <ul>
                 <li>
                     <Link to={'/'}>Home</Link>
@@ -22,18 +22,14 @@ export default function Home(){
                 </li>
             </ul>
         </nav>
-        <h1>Home</h1>
-
-        <div>
-            
-             {items.map(item => 
-                <div><Link to={`/contacts/${item.id}`}> {item.nombre} </Link></div>)
-            } 
-        </div>
-
-            <div>
-                <Outlet />
-            </div>
+       <h1>Hola, aquí vamos a probar los hooks</h1>
+       <Example />
+       <Reduc />
+       <Multiplicacion />
+      
         </>
     )
 }
+
+export default Info
+

@@ -8,6 +8,9 @@ import Home from './routes/Home';
 import About from './routes/About';
 import Contact from './routes/Contact';
 import Contacts from './routes/Contacts';
+import Info from './routes/Info';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const router = createBrowserRouter([
   {
@@ -23,12 +26,17 @@ const router = createBrowserRouter([
   },
   {
     path: '/about',
-    element: <About />
+    element: <About />,
+    errorElement: <Error />,
   },
   {
     path: '/contact',
     element: <Contact />
   },
+  {
+    path: '/info',
+    element: <Info />
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
